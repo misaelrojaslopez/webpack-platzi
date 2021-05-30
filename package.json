@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node ./scripts/create-env.js && webpack --mode production --config webpack.config.js",
+    "build:prod": "node ./scripts/create-env.js && webpack --mode production --config webpack.config.js",
+    "build": "webpack --mode production --config webpack.config.js",
     "dev": "webpack --config webpack.config.dev.js",
+    "watch": "webpack --watch --config webpack.config.dev.js",
     "build:watch": "webpack --watch --config webpack.config.js"
   },
   "repository": {
@@ -42,6 +44,7 @@
     "terser-webpack-plugin": "^5.1.1",
     "url-loader": "^4.1.1",
     "webpack": "^5.36.2",
+    "webpack-bundle-analyzer": "^4.4.2",
     "webpack-cli": "^4.6.0"
   }
 }
